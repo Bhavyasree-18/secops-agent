@@ -1,0 +1,3096 @@
+[
+  {
+    "id": "INC-20260929-143533941",
+    "title": "Production API Outage Due to Database Connection Pool Exhaustion",
+    "description": "The production API experienced intermittent 500 Internal Server Error responses for approximately 25 minutes. The issue was caused by the database connection pool reaching its maximum limit, preventing new API requests from acquiring database connections. Monitoring showed a sudden increase in active database connections following a recent deployment. The team resolved the incident by restarting the affected service, increasing the connection pool limit, and rolling back the recent database-related change. A post-incident review identified inefficient database connection handling in one of the newly deployed API endpoints.",
+    "severity": "Medium",
+    "category": "Other",
+    "status": "open",
+    "created_at": "2026-09-29T14:35:33.942220+00:00",
+    "memories_recalled": 0,
+    "similar_incidents": 0,
+    "analysis_ms": 3549,
+    "memory_details": []
+  },
+  {
+    "id": "INC-20260929-164422430-c078e2f2",
+    "title": "Production API Outage Due to Database Connection Pool Exhaustion",
+    "description": "The production API experienced intermittent 500 Internal Server Error responses for approximately 25 minutes. Monitoring showed that the database connection pool had reached its maximum limit, preventing new API requests from acquiring database connections. The issue started shortly after a recent deployment that introduced inefficient database connection handling in a newly added API endpoint. The affected service was restarted and the recent database-related change was rolled back, restoring normal API availability.\n",
+    "severity": "Medium",
+    "category": "Other",
+    "status": "open",
+    "created_at": "2026-09-29T16:44:22.432277+00:00",
+    "memories_recalled": 48,
+    "similar_incidents": 0,
+    "analysis_ms": 3737,
+    "memory_details": [
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "INC-20260929-172530760-71a6f207",
+    "title": "Suspicious Login Activity Detected on Employee Account",
+    "description": "Multiple failed login attempts were detected on an employee account from an unfamiliar IP address, followed by a successful login from the same location. The activity occurred outside the employee's normal working hours. The security team temporarily disabled the account, reset the user's credentials, revoked active sessions, and reviewed authentication logs for additional suspicious activity. No unauthorized data access was identified during the investigation.",
+    "severity": "Critical",
+    "category": "Credential Attack",
+    "status": "open",
+    "created_at": "2026-09-29T17:25:30.760773+00:00",
+    "memories_recalled": 48,
+    "similar_incidents": 0,
+    "analysis_ms": 3258,
+    "memory_details": [
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SEED-001",
+    "title": "Credential stuffing against VPN portal",
+    "description": "Thousands of failed VPN logins from rotating residential IPs over 40 minutes; 2 accounts logged in successfully. Neither account had MFA.",
+    "category": "Credential Attack",
+    "severity": "High",
+    "status": "resolved",
+    "created_at": "2026-09-08T18:25:09.123202+00:00",
+    "resolved_at": "2026-09-08T18:25:09.123202+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Blocked offending ASN ranges at WAF, forced password reset and session revocation for the 2 accounts, enforced MFA on the VPN group.",
+    "analyst_feedback": "Check for MFA gaps FIRST. Successful login after mass failures means the account is compromised until proven otherwise. Rate-limit per username, not just per IP.",
+    "resolution_minutes": 95,
+    "memories_recalled": 0,
+    "seeded": true
+  },
+  {
+    "id": "SEED-002",
+    "title": "Phishing email with fake Microsoft 365 login page",
+    "description": "12 employees received an email with a link to a credential-harvesting page. 3 clicked, 1 entered credentials.",
+    "category": "Phishing",
+    "severity": "Medium",
+    "status": "resolved",
+    "created_at": "2026-09-12T18:25:09.123202+00:00",
+    "resolved_at": "2026-09-12T18:25:09.123202+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Purged the email from all mailboxes, blocked the domain at proxy, reset the affected user's password, reviewed inbox rules for forwarding.",
+    "analyst_feedback": "Always check for malicious inbox forwarding rules after a credential phish. Search mail logs for other recipients before closing.",
+    "resolution_minutes": 70,
+    "memories_recalled": 0,
+    "seeded": true
+  },
+  {
+    "id": "SEED-003",
+    "title": "Ransomware note found on file server",
+    "description": "Files on FS-02 renamed with .locked extension and ransom note dropped in every share. EDR alert fired on unsigned binary launched from a user's Downloads folder.",
+    "category": "Ransomware",
+    "severity": "Critical",
+    "status": "resolved",
+    "created_at": "2026-09-17T18:25:09.123202+00:00",
+    "resolved_at": "2026-09-17T18:25:09.123202+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Isolated host via EDR, disabled the user's account, restored shares from previous night's snapshot, hunted for the same hash across the fleet.",
+    "analyst_feedback": "Isolate first, investigate second. Snapshots saved us - verify backup integrity weekly. Check lateral movement via SMB before restoring.",
+    "resolution_minutes": 240,
+    "memories_recalled": 0,
+    "seeded": true
+  },
+  {
+    "id": "SEED-004",
+    "title": "Privilege escalation on Linux build server",
+    "description": "Auditd showed a CI service account running sudo to edit /etc/sudoers and add itself to the wheel group.",
+    "category": "Privilege Escalation",
+    "severity": "High",
+    "status": "resolved",
+    "created_at": "2026-09-21T18:25:09.123202+00:00",
+    "resolved_at": "2026-09-21T18:25:09.123202+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Rotated CI secrets, reverted sudoers from config management, rebuilt the runner from a clean image, audited pipeline definitions for injected steps.",
+    "analyst_feedback": "Root cause was a malicious pull request modifying the pipeline. Add branch protections and require review for CI config changes.",
+    "resolution_minutes": 180,
+    "memories_recalled": 0,
+    "seeded": true
+  },
+  {
+    "id": "SEED-005",
+    "title": "Suspicious impossible-travel login for finance user",
+    "description": "Finance manager logged in from Hyderabad and from Frankfurt 6 minutes apart. Second session accessed the payments export.",
+    "category": "Other",
+    "severity": "Medium",
+    "status": "resolved",
+    "created_at": "2026-09-25T18:25:09.123202+00:00",
+    "resolved_at": "2026-09-25T18:25:09.123202+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Revoked all sessions, reset credentials, confirmed with user that Frankfurt login was not theirs, reviewed the payments export access logs.",
+    "analyst_feedback": "Impossible travel plus access to sensitive exports = treat as account takeover, not a VPN false positive. Ask the user directly out-of-band.",
+    "resolution_minutes": 55,
+    "memories_recalled": 0,
+    "seeded": true
+  },
+  {
+    "id": "SEED-006",
+    "title": "Public S3 bucket exposing internal reports",
+    "description": "A cloud posture scan flagged an S3 bucket with public-read ACL containing internal quarterly reports. No access from unknown IPs seen yet.",
+    "category": "Other",
+    "severity": "Medium",
+    "status": "resolved",
+    "created_at": "2026-09-27T18:25:09.123202+00:00",
+    "resolved_at": "2026-09-27T18:25:09.123202+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Removed public ACL, enabled account-level Block Public Access, reviewed CloudTrail and access logs for external reads.",
+    "analyst_feedback": "Enable Block Public Access org-wide. Always check access logs to determine whether the exposure was actually exploited.",
+    "resolution_minutes": 40,
+    "memories_recalled": 0,
+    "seeded": true
+  },
+  {
+    "id": "INC-20260929-175240240-0aa6bfc6",
+    "title": "Unauthorized Access Attempt",
+    "description": "An unauthorized user attempted to access the organization's internal system using invalid login credentials multiple times. The incident was detected by the security monitoring system, and the account was temporarily locked to prevent further unauthorized access.",
+    "severity": "Medium",
+    "category": "Other",
+    "status": "resolved",
+    "created_at": "2026-09-29T17:52:40.243153+00:00",
+    "memories_recalled": 48,
+    "similar_incidents": 2,
+    "analysis_ms": 3392,
+    "memory_details": [
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "incident:SEED-006",
+          "outcome:Resolved",
+          "severity:Medium",
+          "category:Other",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "incident:SEED-006",
+          "outcome:Resolved",
+          "severity:Medium",
+          "category:Other",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "incident:SEED-006",
+          "outcome:Resolved",
+          "severity:Medium",
+          "category:Other",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      }
+    ],
+    "resolved_at": "2026-09-29T17:55:04.308463+00:00",
+    "outcome": "Resolved",
+    "analyst_actions": "Reviewed the login attempt logs and identified multiple failed login attempts from the same IP address. Verified that the activity was unauthorized, blocked the suspicious IP address, and temporarily locked the affected user account. Reset the user's password and monitored the account for further suspicious activity.",
+    "analyst_feedback": "The incident was handled successfully. The repeated login attempts were identified and blocked before any unauthorized access occurred. Recommend enabling MFA and continuing to monitor similar login activity.",
+    "resolution_minutes": 25
+  },
+  {
+    "id": "INC-20260929-182358310-e39c63c3",
+    "title": "Unauthorized Access Attempt",
+    "description": "An unauthorized user attempted to access the organization's internal system using invalid login credentials multiple times. The incident was detected by the security monitoring system, and the account was temporarily locked to prevent further unauthorized access.=",
+    "severity": "Medium",
+    "category": "Other",
+    "status": "open",
+    "created_at": "2026-09-29T18:23:58.311543+00:00",
+    "memories_recalled": 58,
+    "similar_incidents": 3,
+    "analysis_ms": 3144,
+    "memory_details": [
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "incident:SEED-006",
+          "outcome:Resolved",
+          "severity:Medium",
+          "category:Other",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "INC-20260929-175240240-0aa6bfc6",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "category:Other",
+          "incident:INC-20260929-175240240-0aa6bfc6",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "incident:SEED-006",
+          "source:secops-memory",
+          "category:Other",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "incident:SEED-006",
+          "outcome:Resolved",
+          "severity:Medium",
+          "category:Other",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-006",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "incident:SEED-006",
+          "outcome:Resolved",
+          "severity:Medium",
+          "category:Other",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "smoke-test-0c24ba63",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:secops-memory",
+          "type:credential_stuffing",
+          "incident:smoke-test-0c24ba63",
+          "outcome:resolved",
+          "source:analyst-resolution",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "category:Credential Attack",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:High",
+          "seed:demo",
+          "outcome:Resolved",
+          "trust:analyst-confirmed",
+          "source:analyst-resolution",
+          "incident:SEED-001"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-001",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "source:analyst-resolution",
+          "category:Credential Attack",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "seed:demo",
+          "severity:High",
+          "type:security_incident",
+          "incident:SEED-001",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-002",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:Medium",
+          "category:Phishing",
+          "source:secops-memory",
+          "seed:demo",
+          "trust:analyst-confirmed",
+          "incident:SEED-002",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-004",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "severity:High",
+          "category:Privilege Escalation",
+          "source:secops-memory",
+          "trust:analyst-confirmed",
+          "seed:demo",
+          "incident:SEED-004",
+          "outcome:Resolved",
+          "source:analyst-resolution"
+        ]
+      },
+      {
+        "document_id": "SEED-005",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "type:security_incident",
+          "source:analyst-resolution",
+          "source:secops-memory",
+          "outcome:Resolved",
+          "category:Other",
+          "seed:demo",
+          "severity:Medium",
+          "incident:SEED-005",
+          "trust:analyst-confirmed"
+        ]
+      },
+      {
+        "document_id": "SEED-003",
+        "trust_tier": "analyst-confirmed",
+        "tags": [
+          "seed:demo",
+          "source:secops-memory",
+          "type:security_incident",
+          "severity:Critical",
+          "outcome:Resolved",
+          "category:Ransomware",
+          "source:analyst-resolution",
+          "incident:SEED-003",
+          "trust:analyst-confirmed"
+        ]
+      }
+    ]
+  }
+]
